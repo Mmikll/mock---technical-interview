@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sour gummy;
+    --text-color: #eeeee4;
+    --bg-color: #154c79;
+    --border-color: rgba(25, 12, 139, 0.667);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+h1{
+    text-align: center;
+    text-wrap: pretty;
+    color: var(--text-color);
+    font-size: clamp(1.3rem, 5rem, 6rem);
+}
+
+.maker{
+    text-align: center;
+    text-wrap: pretty;
+    color: var(--text-color);
+    font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+.weather--container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 80dvh;
+    gap: 30px;
+    max-width: 1080px;
+}
+
+.nav{
+    display: flex;
+    outline: none;
+    justify-content: center;
+    background-color: var(--text-color);
+    border-radius: 20px;
+    box-shadow: -14px 3px 74px -8px rgba(0,0,0,0.75);
+    outline: none;
+    border-bottom: 5px solid var(--border-color);
+    border-left: 5px solid var(--border-color);
+    justify-content: space-around;
+} 
+
+.nav__input{
+    padding: 25px;
+    background-color: var(--text-color);
+    border: none;
+    font-size: clamp(1rem, 1.3rem, 2rem);
+    width: 50dvw;
+    border-radius: 20px;
+    outline: none;
+}
+
+.nav--btn{
+    align-self: center;
+    background-color: var(--text-color);
+    border: none;
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+    height: 70px;
+    outline: none;
+    padding: 0 5px;
+    width: 70px;
+}
+
+.weather{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3, 10dvh);
+    background-color: var(--text-color) ;
+    padding: 15px;
+    border-radius: 20px;
+    border: 5px solid var(--border-color);
+    width: 100%;
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.weather--section{
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    grid-area: 1 / 1 / span 3 / span 1;
+    background: var(--bg-color);
+}
+
+.weather--temp{
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    grid-area: 1 / 2 / span 1 / span 1;
+    background: var(--bg-color);
+}
+
+.weather--desc{
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    grid-area: 2 / 2 / span 2 / span 1;
+    background: var(--bg-color);
+}
