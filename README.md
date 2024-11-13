@@ -23,3 +23,7 @@ Functions:
   Process the response and display the data in the interface.
 
 ![Capture](https://github.com/user-attachments/assets/d60c62ba-e9bc-4f3e-8775-666530bac703)
+
+# My Desing Sketch:
+
+![web-sketch](https://github.com/user-attachments/assets/c422745e-d648-4d61-aeb9-c957fb1090a4)
