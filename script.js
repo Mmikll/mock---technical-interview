@@ -6,14 +6,15 @@ const getWeather = async(cityName) => {
             text: "should be at least 4 letters",
         });
         return;
-    }
+    };
+    
     const apikey = "e57f27c6abed63d3cd7645cd175d2d2a";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apikey}`;
 
     try {
         const data = await fetch(url);
         const weatherData = await data.json();
-        if(weatherData?.cod === '404') throw new Error('there was an error') 
+        if(weatherData?.cod === '404') throw new Error('there was an error'); 
         
         const { 
             name: city, 
@@ -31,7 +32,7 @@ const getWeather = async(cityName) => {
         humidity,
         windSpeed,
         city,
-    }
+    };
 
     } catch (error) {
         console.log(error?.message);
@@ -42,18 +43,17 @@ const getWeather = async(cityName) => {
         });
     }
 
-}
-
+};
 const tempChanger = (temp) => {
-    const celciusTemp = Math.round(temp - 273.15) 
-    return celciusTemp
-}
+    const celciusTemp = Math.round(temp - 273.15) ;
+    return celciusTemp;
+};
 
 const form = document.querySelector("#inputCity");
-const data = document.querySelector('.weather--section')
-const temp = document.querySelector('.weather--temp')
-const desc = document.querySelector('.weather--desc')
-
+const data = document.querySelector('.weather--section');
+const temp = document.querySelector('.weather--temp');
+const desc = document.querySelector('.weather--desc');
+const weatherSection = document.querySelector('.weather');
 
 form.addEventListener("submit", async(e) => {
     e.preventDefault();
@@ -65,10 +65,11 @@ form.addEventListener("submit", async(e) => {
         humidity,
         windSpeed,
         city,
-    } =  await getWeather(getCityName)
-    const celciusTemp = tempChanger(temperature)
-    data.innerHTML = `The current weather in ${city} features ${description}.`
-    ;
+    } =  await getWeather(getCityName);
+    const celciusTemp = tempChanger(temperature);
+    data.innerHTML = `The current weather in ${city} features ${description}.`;
     temp.innerHTML = `The Average Temperature Is ${celciusTemp}°C`;
     desc.innerHTML = `Humidity: ${humidity}% WindSpeed: ${windSpeed}m/s`;
+    weatherSection.style.visibility = 'visible'; // Add style
+    weatherSection.classList.add('animate__animated', 'animate__fadeInUp', 'animate__slow'); // Add class
 }); 

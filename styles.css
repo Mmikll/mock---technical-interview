@@ -12,7 +12,6 @@ body {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: var(--bg-color);
 }
@@ -34,9 +33,9 @@ h1{
 .weather--container{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 20px;
     height: 80dvh;
-    gap: 30px;
     max-width: 1080px;
 }
 
@@ -91,6 +90,7 @@ h1{
     width: 100%;
     gap: 20px;
     color: var(--text-color);
+    box-shadow: 0 0 40px 5px rgba(49, 47, 47, 0.75);
 }
 
 .weather--section{

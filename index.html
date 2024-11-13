@@ -8,20 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>weather-app</title>
 </head>
 <body>
 
     <h1> &#x2601; Weather  App  &#x2601;</h1>
 
-    <main class="weather--container">
+    <main class="weather--container" >
 
-        <form class="nav" id="inputCity" >
+        <form class="nav animate__animated animate__bounceIn" id="inputCity" >
             <input type="text" placeholder="City Name" class="nav__input" name="city" autocomplete="off">
             <button type="submit" class="material-symbols-outlined nav--btn" >search</button>
         </form>
 
-        <section class="weather">
+        <section class="weather" style="visibility:hidden;" >
             <div class="weather--section">Name and Data of the city</div>
             <div class="weather--temp">Temperature</div>
             <div class="weather--desc">Description</div>
