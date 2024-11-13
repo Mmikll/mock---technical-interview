@@ -73,6 +73,11 @@ h1{
     outline: none;
     padding: 0 5px;
     width: 70px;
+    transition: all 0.3s;
+}
+
+.nav--btn:hover{
+    background-color: var(--bg-color);
 }
 
 .weather{
