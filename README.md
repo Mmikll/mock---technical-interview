@@ -1,4 +1,4 @@
-﻿# Challenge - Result: https://weather-web-2.netlify.app/
+﻿# Challenge - Result: https://mock-weather-app-interview.netlify.app/
  
 Objective
 Create a web application that allows the user to enter a
