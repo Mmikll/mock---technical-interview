@@ -65,7 +65,7 @@ form.addEventListener("submit", async(e) => {
         humidity,
         windSpeed,
         city,
-    } =  await getWeather(getCityName);
+    } = await getWeather(getCityName);
     const celciusTemp = tempChanger(temperature);
     data.innerHTML = `The current weather in ${city} features ${description}.`;
     temp.innerHTML = `The Average Temperature Is ${celciusTemp}°C`;
